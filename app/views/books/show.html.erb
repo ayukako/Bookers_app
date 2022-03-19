@@ -1,5 +1,10 @@
-<p>Book was successfully created</p>
+
 
 <h4>title</h4><p><%= @book.title %></p>
 
 <h4>body</h4><p><%= @book.body %></p>
+
+<%= link_to "Edit", edit_book_path(@book.id) %>
+
+
+<a href="books/index">Back</a>
