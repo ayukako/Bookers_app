@@ -1,3 +1,8 @@
+<% if flash[:notice] %>
+<p><%= flash[:notice] %></p>
+<% end %>
+
+
 <h1>Editing Book</h1>
 
 <%= form_with model: @book, url: update_book_path(@book.id), method: :patch do |f| %>
@@ -10,7 +15,7 @@
 
 <%= f.submit 'Update Book' %>
 
-<%= link_to "Show", books_path(@book.id) %>
+<%= link_to "Show", book_path(@book.id) %>
 <%= link_to "Back", books_index_path %>
 
 <% end %>
